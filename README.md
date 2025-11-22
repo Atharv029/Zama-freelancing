@@ -2,7 +2,7 @@
 
 A production-grade **decentralized freelance marketplace** where bid amounts remain **completely private** using **Zama FHE (Fully Homomorphic Encryption)** until the project deadline passes.
 
-## 🔐 Key Features
+##  Key Features
 
 - **Encrypted Bids**: All bid amounts are encrypted using Zama FHE technology
 - **Fair Competition**: No one can see bid amounts until the deadline
@@ -11,12 +11,11 @@ A production-grade **decentralized freelance marketplace** where bid amounts rem
 - **Beautiful UI**: Modern, responsive design
 - **Web3 Wallet Integration**: Connect with MetaMask and other wallets
 
-## 🏗️ How It Works
+## How It Works
 
 ### For Clients (Posting Projects):
 
 1. **Post a Project**: Create a project with title, description, budget range, and deadline
-2. **Escrow Funds**: Your maximum budget is held in the smart contract
 3. **Receive Bids**: Freelancers submit encrypted bids (amounts are hidden)
 4. **Deadline Passes**: No more bids allowed
 5. **Bids Revealed**: Oracle decrypts all bids using Zama FHE
@@ -31,27 +30,18 @@ A production-grade **decentralized freelance marketplace** where bid amounts rem
 4. **Wait for Reveal**: After deadline, your bid becomes visible to client
 5. **Get Hired**: If selected, payment is automatic!
 
-## 💰 Economics
-
-- **Platform Fee**: 2.5% of winning bid
-- **Escrow**: Client's max budget held until completion
-- **Payment Split**:
-  - Winner receives: Bid amount - 2.5%
-  - Platform receives: 2.5% of bid
-  - Client refund: Max budget - bid amount
 
 ### Example:
 ```
-Project Budget: 2-5 ETH (5 ETH escrowed)
-Winning Bid: 3.5 ETH
+Project Budget: 2-5 ETH
+Winning person Bid: 3.5 ETH ( person will be selected by project creator only based on skill and bid )
 
 Distribution:
 ✅ Winner: 3.4125 ETH (3.5 - 2.5%)
 ✅ Platform: 0.0875 ETH (2.5%)
-✅ Client Refund: 1.5 ETH (5 - 3.5)
 ```
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 
@@ -63,17 +53,12 @@ Distribution:
 
 ```bash
 # Clone the repository
-git clone <your-repo-url>
-cd private-bidding-platform
+git clone https://github.com/Atharv029/Zama-freelancing.git
+cd Zama-freelancing
 
 # Install dependencies
 npm install
 
-# Create .env file
-cp .env.example .env
-
-# Add your WalletConnect Project ID
-# Get one at: https://cloud.walletconnect.com
 ```
 
 ### Run Development Server
@@ -98,11 +83,8 @@ The smart contract is in `contracts/FreelanceBidding.sol`
    - `_oracle`: Your wallet address
    - `_feeCollector`: Your wallet address
 6. Copy deployed contract address
-7. Add to `.env` file
 
-**Detailed Guide**: See [CONTRACT_DEPLOYMENT.md](./CONTRACT_DEPLOYMENT.md)
-
-## 🔐 Zama FHE Integration
+##  Zama FHE Integration
 
 This platform uses **Zama's Fully Homomorphic Encryption** to keep bids private.
 
@@ -120,7 +102,7 @@ This platform uses **Zama's Fully Homomorphic Encryption** to keep bids private.
 
 See `src/lib/fheEncryption.ts` for implementation details.
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 private-bidding-platform/
@@ -150,19 +132,8 @@ private-bidding-platform/
 └── README.md                      # This file
 ```
 
-## 🎨 Design System
 
-The platform uses a carefully designed color system:
-
-- **Primary**: Professional blue (#1E40AF)
-- **Accent**: Vibrant cyan for CTAs
-- **Encrypted**: Purple for encryption indicators
-- **Success**: Green for completed projects
-- **Warning**: Amber for deadlines
-
-All colors are defined in `src/index.css` using HSL values for consistency.
-
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Frontend**: React 18 + TypeScript + Vite
 - **Styling**: Tailwind CSS + Shadcn UI
@@ -171,13 +142,7 @@ All colors are defined in `src/index.css` using HSL values for consistency.
 - **Encryption**: Zama FHE
 - **Network**: Ethereum Sepolia Testnet
 
-## 📚 Documentation
-
-- **[SETUP.md](./SETUP.md)**: Complete setup and testing guide
-- **[CONTRACT_DEPLOYMENT.md](./CONTRACT_DEPLOYMENT.md)**: Smart contract deployment
-- **Contract Code**: See `contracts/FreelanceBidding.sol` for inline documentation
-
-## 🧪 Testing
+## Testing
 
 ### Test Workflow:
 
@@ -192,77 +157,7 @@ All colors are defined in `src/index.css` using HSL values for consistency.
    - Verify bid is hidden
    - Check payment after win
 
-## 🐛 Common Issues
-
-### Cannot connect wallet
-- Install MetaMask
-- Switch to Sepolia network
-- Refresh page
-
-### Transaction failed
-- Check Sepolia ETH balance
-- Verify correct network
-- Check gas limits
-
-### Bids not showing
-- Wait for blockchain confirmation
-- Check contract address in .env
-- Verify you're connected to Sepolia
-
-## 🚨 Security
-
-- ✅ Reentrancy protection
-- ✅ Input validation (client & contract)
-- ✅ Access control for functions
-- ✅ Escrow funds safely held
-- ✅ ZK proofs for bid validation
-
-**Before mainnet**: Get professional security audit!
-
-## 🤝 Contributing
-
-Contributions welcome! Please:
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Submit a pull request
 
 ## 📄 License
 
 MIT License - see LICENSE file
-
-## 🙏 Acknowledgments
-
-- **Zama.ai**: For FHE technology
-- **OpenZeppelin**: For security patterns
-- **Shadcn**: For UI components
-- **RainbowKit**: For wallet integration
-
-## 📞 Support
-
-- **Issues**: GitHub Issues
-- **Documentation**: See SETUP.md
-- **Contract**: See CONTRACT_DEPLOYMENT.md
-
-## 🎯 Roadmap
-
-- [ ] Mainnet deployment
-- [ ] Reputation system
-- [ ] Dispute resolution
-- [ ] Multi-milestone projects
-- [ ] IPFS for proposals
-- [ ] Mobile app
-
-## 🌟 Features Showcase
-
-- **Private Bidding**: Industry-first FHE encryption
-- **Fair Process**: No one sees bids until reveal
-- **Smart Escrow**: Automatic payment distribution
-- **Beautiful UI**: Modern, intuitive design
-- **Full Web3**: Decentralized and trustless
-
----
-
-**Built with ❤️ for the decentralized future**
-
-Ready to revolutionize freelancing? Start by reading [SETUP.md](./SETUP.md)! 🚀
