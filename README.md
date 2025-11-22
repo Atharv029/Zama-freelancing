@@ -80,12 +80,6 @@ This platform uses **Zama's Fully Homomorphic Encryption** to keep bids private.
 3. **After Deadline**: Oracle decrypts using Zama gateway
 4. **Result**: All bids revealed simultaneously
 
-### Development vs Production:
-
-- **Development**: Uses mock encryption (placeholder)
-- **Production**: Replace with actual Zama FHE library
-
-See `src/lib/fheEncryption.ts` for implementation details.
 
 ## Project Structure
 
@@ -143,6 +137,6 @@ private-bidding-platform/
    - Check payment after win
 
 
-## 📄 License
+## License
 
 MIT License - see LICENSE file
