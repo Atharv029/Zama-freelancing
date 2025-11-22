@@ -106,8 +106,6 @@ private-bidding-platform/
 │   ├── types/
 │   │   └── project.ts             # TypeScript types
 │   └── App.tsx                    # Main app
-├── SETUP.md                       # Complete setup guide
-├── CONTRACT_DEPLOYMENT.md         # Deployment guide
 └── README.md                      # This file
 ```
 
