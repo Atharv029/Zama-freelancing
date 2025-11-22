@@ -69,21 +69,6 @@ npm run dev
 
 Visit `http://localhost:8080`
 
-## 📝 Smart Contract Deployment
-
-The smart contract is in `contracts/FreelanceBidding.sol`
-
-### Deploy with Remix (Easiest):
-
-1. Open [Remix IDE](https://remix.ethereum.org)
-2. Copy contract from `contracts/FreelanceBidding.sol`
-3. Compile with Solidity 0.8.20+
-4. Connect MetaMask (Sepolia network)
-5. Deploy with constructor parameters:
-   - `_oracle`: Your wallet address
-   - `_feeCollector`: Your wallet address
-6. Copy deployed contract address
-
 ##  Zama FHE Integration
 
 This platform uses **Zama's Fully Homomorphic Encryption** to keep bids private.
